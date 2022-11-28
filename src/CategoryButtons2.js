@@ -3,9 +3,9 @@
 
 import "./App";
 import { useState } from "react";
-import FormControl from './@mui/material/FormControl';
-import FormLabel from './@mui/material/FormLabel';
-import Checkbox from './@mui/material/Checkbox';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 function CategoryButtons2({filterCategory, val}) {
     const [booll,setBooll] = useState(true);
