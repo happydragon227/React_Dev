@@ -25,10 +25,12 @@
 -> The "sorted" state stores the option you choose to sort the items, which are either "Prices" or "Ratings". \
 -> The "filter1" state stores the current "bakery type" option you are selecting, which are either "All", "bread", "cake", or "cookie". \
 -> The "filter2" state stores the list of Dietary Restrictions you had selected. \
+
 -> The CategoryButtons is for filtering the type of the bakery. \
     -> The default setup for "filter1" state is "All", because originally, the application should display all the items. \
     -> Because a bakery cannot be a bread or cake or cookie at the same time, making it into a checkbox selection may confuse user, so I make it into radio button.\
     -> The data is passed down through app.js to CategoryButtons.js by the function "filterCategory1", it takes the current catogory you've clicked, and replace the "filter1" state. Then we reset the list based on the values in the "filter1" state and "filter2" state, which causes the rerendering. \
+
 -> The CategoryButtons2 is for filtering the Dietary Restrictions. \
     -> The default setup for "filter2" state is "[]", because originally, no boxes are checked. \
     -> Each category has their own "booll" state which defaults to be "true", once it is clicked, it will be set to false. If clicked again, it will be set to true.\
@@ -46,7 +48,7 @@
     -> The data is passed down through app.js to BakeryItem.js by the function "handleCount", it passes back the item value, whether to remove or add boolean, and its name. 
     
 ### How the User Triggers State Changes
--> They are all triggered by click. 
+-> They are all triggered by click. \
 -> When you click a bakery type category, it will call the function "filterCategory1", which will change the "filter1" state to the one you clicked. \
 -> When you click a Dietary Restrictions category once, it will set this specific category's "booll" state to false, it will then call the function "filterCategory2", which will add this category to the "filter2" state. If this button is clicked again, it will remove this category from the "filter2" state. \
 -> When you click a sort category, it will call the function "setOrder", which will either be sorted by "price" or "ratings". \
