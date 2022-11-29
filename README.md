@@ -24,23 +24,23 @@
 -> The "list" state stores all the filtered, sorted items. \
 -> The "sorted" state stores the option you choose to sort the items, which are either "Prices" or "Ratings". \
 -> The "filter1" state stores the current "bakery type" option you are selecting, which are either "All", "bread", "cake", or "cookie". \
--> The "filter2" state stores the list of Dietary Restrictions you had selected. \
+-> The "filter2" state stores the list of Dietary Restrictions you had selected. 
 
 -> The CategoryButtons is for filtering the type of the bakery. \
     -> The default setup for "filter1" state is "All", because originally, the application should display all the items. \
     -> Because a bakery cannot be a bread or cake or cookie at the same time, making it into a checkbox selection may confuse user, so I make it into radio button.\
-    -> The data is passed down through app.js to CategoryButtons.js by the function "filterCategory1", it takes the current catogory you've clicked, and replace the "filter1" state. Then we reset the list based on the values in the "filter1" state and "filter2" state, which causes the rerendering. \
+    -> The data is passed down through app.js to CategoryButtons.js by the function "filterCategory1", it takes the current catogory you've clicked, and replace the "filter1" state. Then we reset the list based on the values in the "filter1" state and "filter2" state, which causes the rerendering. 
 
 -> The CategoryButtons2 is for filtering the Dietary Restrictions. \
     -> The default setup for "filter2" state is "[]", because originally, no boxes are checked. \
     -> Each category has their own "booll" state which defaults to be "true", once it is clicked, it will be set to false. If clicked again, it will be set to true.\
     -> Because a bakery can have multiple Dietary Restrictions at the same time, I made it into a checkbox selection. \
-    -> The data is passed down through app.js to CategoryButtons2.js by the function "filterCategory2", if you clicked a category once, it will be appened to the "filter2" state. If clicked twice, it will be removed from the "filter2" state. Finally, we reset the list based on the values in the "filter1" state and "filter2" state, which causes the rerendering. \
+    -> The data is passed down through app.js to CategoryButtons2.js by the function "filterCategory2", if you clicked a category once, it will be appened to the "filter2" state. If clicked twice, it will be removed from the "filter2" state. Finally, we reset the list based on the values in the "filter1" state and "filter2" state, which causes the rerendering. 
     
 -> The SortButtons is for sorting items by prices or ratings. The default sorting method is price. \
     -> The default setup for "sorted" state is "Price", because originally, the default sort method is by price. \
     -> Because a bakery cannot be sorted in different methods at the same time, I made it into a radio selection. \
-    -> The data is passed down through app.js to SortButtons.js by the function "handleSort", it takes the current catogory you've clicked, and replace the "sorted" state. Everytime the item is displayed, it will call the sort method to sort the items. \
+    -> The data is passed down through app.js to SortButtons.js by the function "handleSort", it takes the current catogory you've clicked, and replace the "sorted" state. Everytime the item is displayed, it will call the sort method to sort the items. 
     
 -> The BakeryItem is a card which contains all the information about this item, and a add or remove button inside. \
     -> The default "list" state is set to the bakeryData, because originally, it should display all the item in the BakeryData. \
