@@ -2,7 +2,7 @@
     -> The goal of this application is for user to find the bakery they want to buy easily by using the sort and filter features.
 
 2. Link to your deployed web application running online: 
-    -> https://happydragon227.github.io/Web_Dev/
+    -> https://happydragon227.github.io/React_Dev/
 
 3. Explain the organization of your Components, and the props and state related to them:
     -> The main file is the index.js file, and inside the index.js, we have our App.js file which contains all our app functions. 
